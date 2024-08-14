@@ -1,5 +1,9 @@
 // Wait for the document to load before running the script 
 (function ($) {
+
+  app.listen(8080, function () {
+  console.log('Example app listening on port 8080!');
+});
   
   // We use some Javascript and the URL #fragment to hide/show different parts of the page
   // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#Linking_to_an_element_on_the_same_page
