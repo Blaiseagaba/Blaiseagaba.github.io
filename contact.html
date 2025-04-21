@@ -75,6 +75,9 @@
   <main>
     <section id="contact" class="container py-5 content-section" data-aos="fade-up">
       <h2>Contact</h2>
+      <div id="success-message" class="alert alert-success d-none" role="alert">
+        Your message has been sent successfully!
+      </div>
       <form id="contact-form" action="https://formspree.io/f/xovdaldj" method="POST">
         <div class="form-group">
           <label for="name">Name:</label>
@@ -95,7 +98,7 @@
 
   <footer>
     <div class="container">
-      <p>&copy; 2025 Blaise Agaba. All rights reserved.</p>
+      <p>© 2025 Blaise Agaba. All rights reserved.</p>
     </div>
   </footer>
 
@@ -113,6 +116,16 @@
     window.onload = function() {
       if (localStorage.getItem('darkMode') === 'true') {
         document.body.classList.add('dark-mode');
+      }
+      // Check for success query parameter
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('success') === 'true') {
+        const successMessage = document.getElementById('success-message');
+        successMessage.classList.remove('d-none');
+        // Hide after 5 seconds
+        setTimeout(() => {
+          successMessage.classList.add('d-none');
+        }, 5000);
       }
     };
   </script>
