@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | Blaise Agaba</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .dark-mode {
+      background-color: #121212 !important;
+      color: #f1f1f1 !important;
+    }
+    .dark-mode .content-section,
+    .dark-mode .job,
+    .dark-mode form {
+      background-color: rgba(30, 30, 30, 0.9) !important;
+      color: #f1f1f1 !important;
+    }
+    .dark-mode nav,
+    .dark-mode footer,
+    .dark-mode header {
+      background-color: #1a1a1a !important;
+    }
+    .dark-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+  <div class="dark-toggle">
+    <button onclick="toggleDarkMode()" class="btn btn-dark">🌓 Toggle Dark Mode</button>
+  </div>
+
+  <header class="text-white text-center py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-3">
+          <img src="dp.jpg" alt="Blaise Agaba" class="rounded-circle mb-3" style="width: 150px; height: 150px;">
+        </div>
+        <div class="col-md-9 text-md-left">
+          <h1>Blaise Agaba</h1>
+          <p>ICT Support Technician</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand text-white" href="index-home.html">Blaise Agaba</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="index-home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="about" class="container py-5 content-section" data-aos="fade-up">
+      <h2>About Me</h2>
+      <p>I am an IT Support Specialist with 2 years of experience in system installation and maintenance, end-user support, remote support, documentation, and problem-solving. My greatest strength is diligence, and I have a talent for cooperativeness. I am passionate about excellence and value integrity.</p>
+      <a href="blaise_agaba_cv.pdf" class="btn btn-outline-primary mt-3" download>📄 Download My CV</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Blaise Agaba. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
+  <script>
+    AOS.init();
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+    }
+    window.onload = function() {
+      if (localStorage.getItem('darkMode') === 'true') {
+        document.body.classList.add('dark-mode');
+      }
+    };
+  </script>
+</body>
+</html>

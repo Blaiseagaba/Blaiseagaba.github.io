@@ -1,4 +1,6 @@
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-  event.preventDefault();
-  alert('Message sent successfully!');
-});
+if (document.getElementById('contact-form')) {
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Message sent successfully!');
+  });
+}
