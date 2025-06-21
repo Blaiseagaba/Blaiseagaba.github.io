@@ -34,3 +34,45 @@ body::before {
 .skill-badges {
   text-align: center;
 }
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' ...");
+  filter: invert(1); /* Makes icon white */
+}
+
+body, .content-section, nav, footer, header {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-toggle i {
+  font-size: 1.5rem;
+}
+
+.dark-toggle button:active i {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+
+
+.progress-bar {
+  width: 0%;
+  transition: width 1.5s ease-in-out;
+}
+
+footer {
+  background-color: #343a40; /* Matches Bootstrap's dark footer */
+  color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.dark-mode footer {
+  background-color: #1a1a1a;
+  color: #f1f1f1;
+}
+
+.navbar-nav .nav-link.active {
+  color: #DA70D6 !important; /* Orchid color */
+  font-weight: 600;
+  border-bottom: 2px solid #DA70D6;
+}
+

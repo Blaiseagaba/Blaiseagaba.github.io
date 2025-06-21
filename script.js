@@ -26,3 +26,4 @@ document.querySelectorAll('form[data-formspree]').forEach(form => {
     });
   });
 });
+
