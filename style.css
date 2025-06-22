@@ -76,3 +76,29 @@ footer {
   border-bottom: 2px solid #DA70D6;
 }
 
+.btn-experience {
+  background-color: #007bff;
+  color: white;
+}
+.btn-experience:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-skills {
+  background-color: 	#28a745;
+  color: white;
+}
+.btn-skills:hover {
+  background-color: 	#28a745;
+  color: white;
+}
+
+.btn-contact {
+  background-color: 	#ffc107;
+  color: white;
+}
+.btn-contact:hover {
+  background-color: 	#ffc107;
+  color: white;
+}
